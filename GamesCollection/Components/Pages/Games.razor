@@ -1,0 +1,53 @@
+﻿@page "/games"
+@rendermode InteractiveServer
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using GamesCollection.Models
+@using GamesCollection.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<GamesCollection.Data.ApplicationDbContext> DbFactory
+
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<div>
+    <input type="search" @bind="titleFilter" @bind:event="oninput" />
+</div>
+
+<p>
+    <a href="games/create">Create New</a>
+</p>
+
+<div>
+<QuickGrid Class="table" Items="FilteredGames" Pagination="pagination">
+    <PropertyColumn Property="game => game.Title" Sortable="true" />
+    <PropertyColumn Property="game => game.Platform" />
+
+    <TemplateColumn Context="game">
+        <a href="@($"games/edit?id={game.Id}")">Edit</a> |
+        <a href="@($"games/details?id={game.Id}")">Details</a> |
+        <a href="@($"games/delete?id={game.Id}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+</div>
+
+<Paginator State="pagination" />
+
+@code {
+    private ApplicationDbContext context = default!;
+
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 5 };
+
+    private string titleFilter = string.Empty;
+
+    private IQueryable<Game> FilteredGames =>
+        context.Game.Where(m => m.Title!.Contains(titleFilter));
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}
