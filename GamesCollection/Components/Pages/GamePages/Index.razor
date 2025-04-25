@@ -20,16 +20,16 @@
 </p>
 
 <div>
-<QuickGrid Class="table" Items="FilteredGames" Pagination="pagination">
-    <PropertyColumn Property="game => game.Title" Sortable="true" />
-    <PropertyColumn Property="game => game.Platform" />
+    <QuickGrid Class="table" Items="FilteredGames" Pagination="pagination">
+        <PropertyColumn Property="game => game.Title" Sortable="true" />
+        <PropertyColumn Property="game => game.Platform" />
 
-    <TemplateColumn Context="game">
-        <a href="@($"games/edit?id={game.Id}")">Edit</a> |
-        <a href="@($"games/details?id={game.Id}")">Details</a> |
-        <a href="@($"games/delete?id={game.Id}")">Delete</a>
-    </TemplateColumn>
-</QuickGrid>
+        <TemplateColumn Context="game">
+            <a href="@($"games/edit?id={game.Id}")">Edit</a> |
+            <a href="@($"games/details?id={game.Id}")">Details</a> |
+            <a href="@($"games/delete?id={game.Id}")">Delete</a>
+        </TemplateColumn>
+    </QuickGrid>
 </div>
 
 <Paginator State="pagination" />

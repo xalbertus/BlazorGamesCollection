@@ -1,0 +1,49 @@
+﻿@page "/games/create"
+@using Microsoft.EntityFrameworkCore
+@using GamesCollection.Models
+@inject IDbContextFactory<GamesCollection.Data.ApplicationDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Create</PageTitle>
+
+<h1>Create</h1>
+
+<h2>Game</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="Game" OnValidSubmit="AddGame" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert"/>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title:</label> 
+                <InputText id="title" @bind-Value="Game.Title" class="form-control" aria-required="true"/> 
+                <ValidationMessage For="() => Game.Title" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="platform" class="form-label">Platform:</label> 
+                <InputText id="platform" @bind-Value="Game.Platform" class="form-control" aria-required="true"/> 
+                <ValidationMessage For="() => Game.Platform" class="text-danger" /> 
+            </div>        
+            <button type="submit" class="btn btn-primary">Create</button>
+        </EditForm>
+    </div>
+</div>
+
+<div>
+    <a href="/games">Back to List</a>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private Game Game { get; set; } = new();
+
+    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task AddGame()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Game.Add(Game);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/games");
+    }
+}
