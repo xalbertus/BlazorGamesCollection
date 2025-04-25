@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jalsi\\source\\repos\\Learning\\GamesCollection\\",
+  "WorkspaceRootPath": "C:\\Users\\jalsi\\Documents\\Repositories\\dotNET\\Games Collection\\GamesCollection\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4815FD03-12A2-42E3-B19B-AD6A52DCB944}|GamesCollection.csproj|c:\\users\\jalsi\\source\\repos\\learning\\gamescollection\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{4815FD03-12A2-42E3-B19B-AD6A52DCB944}|GamesCollection.csproj|c:\\users\\jalsi\\documents\\repositories\\dotnet\\games collection\\gamescollection\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4815FD03-12A2-42E3-B19B-AD6A52DCB944}|GamesCollection.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4815FD03-12A2-42E3-B19B-AD6A52DCB944}|GamesCollection.csproj|c:\\users\\jalsi\\documents\\repositories\\dotnet\\games collection\\gamescollection\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4815FD03-12A2-42E3-B19B-AD6A52DCB944}|GamesCollection.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -19,10 +23,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\jalsi\\Documents\\Repositories\\dotNET\\Games Collection\\GamesCollection\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\jalsi\\Documents\\Repositories\\dotNET\\Games Collection\\GamesCollection\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-25T11:01:52.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\jalsi\\source\\repos\\Learning\\GamesCollection\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\jalsi\\Documents\\Repositories\\dotNET\\Games Collection\\GamesCollection\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\jalsi\\source\\repos\\Learning\\GamesCollection\\appsettings.json",
+              "ToolTip": "C:\\Users\\jalsi\\Documents\\Repositories\\dotNET\\Games Collection\\GamesCollection\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
